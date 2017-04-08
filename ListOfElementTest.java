@@ -27,10 +27,18 @@ public class ListOfElementTest {
 	@Test
 	public void test() throws Exception {
 		driver.get(baseUrl);
-		List<WebElement> radioButtons = driver.findElements(By.xpath(".//input[@name='gender']"));
+		boolean isChecked = false;
+		List<WebElement> radioButtons = driver.findElements(By.xpath(".//input[@type='radio']"));
 		// WebElement radioButtons = driver.findElement(By.name("gender"));
 		int size = radioButtons.size();
 		System.out.println("The Size of the List is: " + size);
+		for (int i = 0; i < size; i++) {
+			radioButtons.get(i).click();
+			Thread.sleep(1000);
+			isChecked = radioButtons.get(i).isSelected();
+
+			System.out.println("The RadioButton " + (i + 1) + " has Value " + isChecked);
+		}
 
 	}
 
