@@ -33,11 +33,17 @@ public class ListOfElementTest {
 		int size = radioButtons.size();
 		System.out.println("The Size of the List is: " + size);
 		for (int i = 0; i < size; i++) {
-			radioButtons.get(i).click();
-			Thread.sleep(1000);
-			isChecked = radioButtons.get(i).isSelected();
-
-			System.out.println("The RadioButton " + (i + 1) + " has Value " + isChecked);
+			WebElement radioElement = radioButtons.get(i);
+			System.out.println("Is the Radio Button " + (i + 1) + " is Enabled? " + radioElement.isEnabled());
+			if (radioElement.isEnabled()) {
+				radioElement.click();
+				Thread.sleep(1000);
+				isChecked = radioElement.isSelected();
+				System.out.println("The RadioButton " + (i + 1) + " has Value " + isChecked);
+			} else {
+				System.out.println("The RadioButton " + (i + 1) + " cannot be Selected!");
+			}
+			
 		}
 
 	}
