@@ -1,1 +1,7 @@
 http://stackoverflow.com/questions/507138/how-do-i-add-a-class-to-a-given-element/40835623#40835623
+How to Add a Class to the Given Element using Pure JavaScript Demo Link
+
+
+
+CSS FlexBox Table Demo Link:
+http://codepen.io/vasansr/pen/PZOJXr
