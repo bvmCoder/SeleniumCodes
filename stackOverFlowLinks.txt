@@ -5,3 +5,7 @@ $(this) will be ReactDOM.findDOMNode(this);
 
 CSS FlexBox Table Demo Link:
 http://codepen.io/vasansr/pen/PZOJXr
+
+
+# Input Search Icon BackGround Image Right Border Issue:
+https://v4-alpha.getbootstrap.com/components/input-group/
